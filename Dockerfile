@@ -27,4 +27,4 @@ RUN mkdir -p /root/.vnc
 COPY passwd /root/.vnc/passwd
 RUN chmod 600 /root/.vnc/passwd
 
-CMD ["vncserver", ":1", "-geometry", "1280x1024", "-depth", "24", "-display", ":1", "-localhost", "no", "-xstartup", "/usr/bin/startxfce4"]
+CMD ["vncserver", ":1", "-geometry", "1280x1024", "-depth", "24", "-display", ":1", "-localhost", "no", "-xstartup", "/usr/bin/startxfce4", "&&", "tail", "-f", "/dev/null"]
