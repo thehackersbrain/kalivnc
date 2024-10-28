@@ -3,7 +3,7 @@
 - On GCP Console
 ```bash
 docker build -t kalivnc .
-docker run -p 5900:5900 -p 5901:5901 -p 5902:5901 -it kalivnc /bin/bash
+docker run --network host -it kalivnc /bin/bash
 ```
 
 - On Kali Docker Container
