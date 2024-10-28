@@ -7,7 +7,7 @@ RUN apt update && \
     echo "en_US.UTF-8 UTF-8" > /etc/locale.gen && \
     dpkg-reconfigure --frontend=noninteractive locales && \
     update-locale LANG=en_US.UTF-8
-RUN apt install iputils-ping git golang python-pipx -y
+RUN apt install iputils-ping git golang python3-pipx -y
 RUN apt clean -y && apt autoremove -y
 
 ENV PULSE_SERVER=/tmp/PulseServer
