@@ -1,5 +1,7 @@
 # Kali Linux (Docker Container on GCP)
 
+![Banner Image](https://raw.githubusercontent.com/thehackersbrain/kalivnc/refs/heads/main/screenshots/kalivnc.png)
+
 - On GCP Console
 ```bash
 git clone https://github.com/thehackersbrain/kalivnc.git && cd kalivnc
