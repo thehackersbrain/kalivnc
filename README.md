@@ -7,6 +7,14 @@ docker build -t kalivnc .
 docker run --network host -d kalivnc
 ```
 
+- For stopping the docker image
+```bash
+docker ps # for getting all running containers
+docker stop <image-id> # for stopping the image
+# or
+docker kill <image-id> # for graceful killing image
+```
+
 - On VNCView Machine
 ```bash
 vncviewer <ip>:1
