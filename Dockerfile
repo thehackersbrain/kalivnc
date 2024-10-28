@@ -23,3 +23,8 @@ RUN apt install novnc x11vnc -y
 RUN touch /root/.Xauthority
 COPY vimrc /root/.vimrc
 COPY tmux.conf /root/.tmux.conf
+RUN mkdir -p /root/.vnc
+COPY passwd /root/.vnc/passwd
+RUN chmod 600 /root/.vnc/passwd
+
+CMD ["vncserver", ":1", "-geometry", "1280x1024", "-depth", "24", "-display", ":1", "-localhost", "no", "-xstartup", "/usr/bin/startxfce4"]
