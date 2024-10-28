@@ -16,4 +16,4 @@ vncserver :1 -geometry 1280x1024 -depth 24 -display :1 -localhost no -xstartup /
 ```bash
 vncviewer <ip>:1
 ```
-> `:1` is for 5901 and display `:1`
+> `:1` is for 5901 and display `:1` and the default password is `kalikali`
