@@ -2,7 +2,7 @@
 # Dockerfile for Kali Linux with XFCE, VNC, and custom tools
 # Author: Gaurav Raj (thehackersbrain) @ Cybercraft Labs Pvt Ltd
 # Created: October 2024
-# License: MIT or specify another license here
+# License: MIT
 # Description: A custom Kali Linux image with a desktop environment, VNC server,
 # and additional tools configured for a streamlined experience.
 # -----------------------------------------------------------------------------
