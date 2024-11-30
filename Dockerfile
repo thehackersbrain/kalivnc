@@ -24,8 +24,10 @@ RUN touch /root/.Xauthority
 COPY vimrc /root/.vimrc
 COPY tmux.conf /root/.tmux.conf
 RUN mkdir -p /root/.vnc
+RUN mkdir -p /root/.config/tigervnc
 COPY passwd /root/.vnc/passwd
 RUN chmod 600 /root/.vnc/passwd
+RUN cp -r /root/.vnc/* /root/.config/tigervnc/
 
 # CMD ["vncserver", ":1", "-geometry", "1280x1024", "-depth", "24", "-display", ":1", "-localhost", "no", "-xstartup", "/usr/bin/startxfce4"]
 CMD ["sh", "-c", "vncserver :1 -geometry 1280x1024 -depth 24 -localhost no -xstartup /usr/bin/startxfce4 && tail -f /dev/null"]
