@@ -2,11 +2,17 @@
 
 ![Banner Image](https://raw.githubusercontent.com/thehackersbrain/kalivnc/refs/heads/main/screenshots/kalivnc.png)
 
-- On GCP Console
+- Using `Dockerfile`
 ```bash
 git clone https://github.com/thehackersbrain/kalivnc.git && cd kalivnc
 docker build -t kalivnc .
 docker run --network host -d kalivnc
+```
+
+- Using `docker-compose`
+```bash
+git clone https://github.com/thehackersbrain/kalivnc.git && mkdir kali-home && cd kalivnc
+docker-compose up -d
 ```
 
 - For stopping the docker image

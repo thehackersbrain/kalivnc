@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  kali-desktop:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: kali-desktop
+    network_mode: host
+    volumes:
+      - kali-home: /root/
+    restart: unless-stopped
+
+volumes:
+  kali-home:
+    driver: local
