@@ -23,11 +23,12 @@ RUN apt install novnc x11vnc -y
 RUN touch /root/.Xauthority
 COPY vimrc /root/.vimrc
 COPY tmux.conf /root/.tmux.conf
-RUN mkdir -p /root/.vnc
-RUN mkdir -p /root/.config/tigervnc
+RUN mkdir -p /root/.vnc /root/.config/tigervnc /root/BurpSuitePro
 COPY passwd /root/.vnc/passwd
 RUN chmod 600 /root/.vnc/passwd
 RUN cp -r /root/.vnc/* /root/.config/tigervnc/
+RUN cp burp-pro.json burploader.jar /root/BurpSuitePro
+
 
 # CMD ["vncserver", ":1", "-geometry", "1280x1024", "-depth", "24", "-display", ":1", "-localhost", "no", "-xstartup", "/usr/bin/startxfce4"]
 CMD ["sh", "-c", "vncserver :1 -geometry 1280x1024 -depth 24 -localhost no -xstartup /usr/bin/startxfce4 && tail -f /dev/null"]
