@@ -8,7 +8,7 @@ services:
     container_name: kali-desktop
     network_mode: host
     volumes:
-      - kali-home: /root/
+      - kali-home:/root/
     restart: unless-stopped
 
 volumes:
